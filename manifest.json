@@ -1,0 +1,68 @@
+{
+  "name": "__MSG_eName__",
+  "description": "__MSG_eDes__",
+  "version": "4.21.2",
+  "manifest_version": 3,
+  "default_locale": "en",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAkJHAUmFnblMIIepHipJBMfW+oCbMTWAKiONsNHUzwk/nX9oTLvg97HG7jLP9FO/ZhVvGBTreKtg0tTDJYwpF0vFOeb5XXYh4ePgP48ymVmlbyEsp7ZjDmy9ACfG7R8XLI5D+HIWw5xObZkaBc1KNSipNfQAonkd3CNd7wV9x1i91MVUyTrXrMPrifePcH4STmeUVpJp0bm571chIfYp7dvVk389UupmKyXDnu8othoiLS6ac+hbqFigoiSxJSEYH4curJFKwxpwEQe7q6XlhwAV/+txh1+0aZD3QKw9DKYbD9FRo6Z/wcmO1Tjt0cxszXilkWQByuR0dOummnQ/EowIDAQAB",
+  "homepage_url": "https://onlyfansdownloader.net",
+  "icons": {
+    "16": "images/logo16.png",
+    "32": "images/logo32.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/logo48.png"
+  },
+  "background": {
+    "service_worker": "service-worker-loader.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "js": [
+        "assets/content-script-loader.chunk-8a6caa76.83939a6c.js"
+      ],
+      "matches": [
+        "https://onlyfans.com/*"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "resources": [
+        "img/*",
+        "assets/*"
+      ],
+      "use_dynamic_url": false
+    },
+    {
+      "matches": [
+        "https://onlyfans.com/*"
+      ],
+      "resources": [
+        "assets/chunk-796ff29a.js",
+        "assets/chunk-ca93beb9.js",
+        "assets/chunk-8a6caa76.js"
+      ],
+      "use_dynamic_url": true
+    }
+  ],
+  "permissions": [
+    "storage",
+    "cookies",
+    "tabs",
+    "unlimitedStorage",
+    "downloads"
+  ],
+  "host_permissions": [
+    "https://*.onlyfans.com/*"
+  ]
+}
